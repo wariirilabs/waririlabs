@@ -1,0 +1,44 @@
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .card img {
+    width: 70px;
+    height: 200px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.btn {
+  border-radius: 2rem !important;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin-right: 0.5rem !important;
+}
+.menu li {
+  width: 8rem !important;
+  background-color: white;
+
+  padding: 0.5rem !important;
+  border-radius: 1rem !important;
+}
+
+.active {
+  background-color: #333 !important;
+}
+
+.active a {
+  color: white !important;
+}
