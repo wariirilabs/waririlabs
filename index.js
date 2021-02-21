@@ -88,31 +88,14 @@ async function getData() {
       
       `;
       
-      
-      
-      
-    
       menu.innerHTML+=template;
-      
-      
-      
-      
-      
-    
-    
-  
-    
-    
-    
-    
-    
 
   })
   let butoane = document.querySelector(".menu").children;
   let main = cox.children;
   
   
-  console.log(main);
+  /* console.log(main); */
   for (let i = 0;i<butoane.length;i++) {
     
     butoane[i].addEventListener('click',function () {
@@ -122,9 +105,9 @@ async function getData() {
       this.classList.add("active");
       const displayItems = this.getAttribute('data-category');
 
-      console.log(displayItems);
+    /*   console.log(displayItems); */
       for(let z = 0;z<main.length;z++) {
-        console.log(main[z]);
+        /* console.log(main[z]); */
         main[z].classList.add("hide");
 
         if((main[z].getAttribute('data-filter')==displayItems) ) {
@@ -157,3 +140,5 @@ function wait(ms){
 }
 }
 getData();
+
+

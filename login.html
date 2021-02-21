@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form name="submit-to-google-sheet">
+    <label for="Name"></label>
+    <input name="Name" id="Name" ></input>
+    <label for="Number"></label>
+    <input name="Number" id="Number"></input>
+    <label for="Image"></label>
+    <input name="Image" id="Image"></input>
+    <label for="Category"></label>
+    <input name="Category" id="Category"></input>
+    <div id='success'></div>
+    <button type="submit">Add user</button>
+
+
+
+  </form>
+  <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz1vLM7oAOu8oouefEDNAyX_2Fd4JrgcxRWHk9sTMm5RJJ-BtaTGP6R0w/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  
+  
+
+</body>
+</html>
