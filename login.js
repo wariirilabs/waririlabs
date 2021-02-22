@@ -29,3 +29,7 @@ order.addEventListener('click', function (){
   stock.classList.remove("active");
 
 })
+
+
+
+
