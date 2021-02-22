@@ -1,0 +1,30 @@
+.btn-large {
+  border-radius: 1rem !important;
+  margin-top: 1rem !important;
+}
+
+label {
+  color: black !important;
+  font-weight: 400;
+  font-size: 1rem !important;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+li a:hover {
+  background-color: #333 !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.active {
+  background-color: #333 !important;
+}

@@ -4,27 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
   <title>Document</title>
 </head>
 <body>
-  <form name="submit-to-google-sheet">
-    <label for="Name">Name</label>
-    <input name="Name" id="Name" ></input>
-    <label for="Number">Number</label>
-    <input name="Number" id="Number"></input>
-    <label for="Image">Image URL</label>
-    <input name="Image" id="Image"></input>
-    <label for="Category">Category</label>
-    <input name="Category" id="Category"></input>
-    <div id='success'></div>
-    <button type="submit">Add user</button>
+  
+  
+  <div class="row">
+    <div class="col s12">
+      <div class="col s3"></div>
+      <div class="col s5 forma hide" style="margin-top: 5rem !important;">
+        <form name="submit-to-google-sheet">
+          <label for="Name">Name</label>
+          <input name="Name" id="Name" ></input>
+          <label for="Number">Number</label>
+          <input name="Number" id="Number"></input>
+          <label for="Image">Image URL</label>
+          <input name="Image" id="Image"></input>
+          <label for="Category">Category</label>
+          <input name="Category" id="Category"></input>
+          <div id='success'></div>
+          <button class="btn-large waves-effect black white-text" type="submit">Add stock</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
 
+  <ul id="slide-out" class="sidenav sidenav-fixed black white-text">
+    <h4 class="brand-logo white-text" style=" padding-left: 2rem !important;">Dashboard</h4>
+    <li><a class="white-text stock"  style="margin-top: 5rem !important;">Manage Stock</a></li>
+    <li><a class="white-text order">Orders</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 
   </form>
-  <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+ 
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbz1vLM7oAOu8oouefEDNAyX_2Fd4JrgcxRWHk9sTMm5RJJ-BtaTGP6R0w/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -37,9 +59,9 @@
     })
   </script>
   
-  
+  <script src="login.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   
   
 
