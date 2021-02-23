@@ -17,7 +17,7 @@ let collapse = document.querySelector(".collapsible");
 
 
 async function getData() {
-  const res  = await fetch("https://spreadsheets.google.com/feeds/list/1CIsHssVTyPFq6uZBK7ChJHDxxSMhG3qkPacP4xr05yQ/od6/public/values?alt=json");
+  const res  = await fetch("https://spreadsheets.google.com/feeds/list/1QuNTaRm_mgvSwVyaZgLQ9XgaHPdVVnKSswNa02ruk0Y/od6/public/values?alt=json");
   const data = await res.json();
   const data2 = data.feed.entry;
   let stonks = [];
