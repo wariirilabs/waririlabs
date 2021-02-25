@@ -146,7 +146,8 @@ async function getData() {
 }
 
 let cart = [];   
-
+let total = document.querySelector(".total");
+let sum=0;
 function getDetails(element){
   let detail = {
     price:element.closest("div").querySelector(".price").textContent,
@@ -154,11 +155,13 @@ function getDetails(element){
 
   }
   template = `
-  <li >${detail.name} : ${detail.price} $</li>
+  <li >${detail.name} : ${detail.price} $  <a class="btn-floating btn-small add waves-effect waves-light green "><i class="material-icons">add</i></a> <a class="btn-floating btn-small add waves-effect waves-light red "><i class="material-icons">remove</i></a></li>
   
   `;
   cart1.innerHTML+=template;
   
+  sum+=parseInt(detail.price);
+  total.innerHTML= parseInt(sum) + "$";
   cart.push(detail);
   console.log(cart);
 }  
@@ -172,5 +175,8 @@ function wait(ms){
 getData();
 
 
-
+let checkout = document.querySelector(".checkout");
+checkout.addEventListener('click', function(){
+  console.log(sum);
+})
 

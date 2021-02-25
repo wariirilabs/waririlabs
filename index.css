@@ -42,3 +42,7 @@
 .active a {
   color: white !important;
 }
+
+.cart li {
+  line-height: 3rem !important;
+}
