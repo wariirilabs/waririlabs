@@ -13,9 +13,14 @@ let menu = document.querySelector(".menu");
 let cox = document.querySelector(".stonks");
 let container = document.querySelector(".container");
 let collapse = document.querySelector(".collapsible");
+let float = document.querySelector(".btn-floating");
 
-
-
+let cart1 = document.querySelector(".cart");
+let shop = document.querySelector(".shop");
+/* float.addEventListener("click",function(){
+  shop.classList.toggle("show")
+  
+}) */
 async function getData() {
   const res  = await fetch("https://spreadsheets.google.com/feeds/list/1QuNTaRm_mgvSwVyaZgLQ9XgaHPdVVnKSswNa02ruk0Y/od6/public/values?alt=json");
   const data = await res.json();
@@ -46,15 +51,16 @@ async function getData() {
         <div class="card ${category}">
           <div class="card-image">
             <img height="260" width="320" src="${image}">
-            <span class="card-title"> ${name}</span>
+            
           </div>
-            <div class="card-content">
-              <p style="font-size:20px !important">Price: ${price}</p>
-              
+            
+          <div class="card-content">
+          <span class="card-title"> ${name}</span>  
+          <p> Price </p>  
+            <p style="font-size:20px !important" class="price"> ${price}</p>
+              <a class="btn black buton white-text" onclick="getDetails(this)" style="margin-top:1.5rem !important" href="#">Add to cart</a>
             </div>
-          <div class="card-action">
-            <a class="btn black white-text" href="#">Add to cart</a>
-          </div>
+          
         </div>
       </div>
         
@@ -65,7 +71,10 @@ async function getData() {
 
         cox.innerHTML+=template2;
         stonks.push(info);
-    
+         
+        
+
+        
   });
 
   
@@ -136,6 +145,23 @@ async function getData() {
   
 }
 
+let cart = [];   
+
+function getDetails(element){
+  let detail = {
+    price:element.closest("div").querySelector(".price").textContent,
+    name:element.closest("div").querySelector(".card-title").textContent
+
+  }
+  template = `
+  <li >${detail.name} : ${detail.price} $</li>
+  
+  `;
+  cart1.innerHTML+=template;
+  
+  cart.push(detail);
+  console.log(cart);
+}  
 function wait(ms){
   var start = new Date().getTime();
   var end = start;
@@ -144,5 +170,7 @@ function wait(ms){
 }
 }
 getData();
+
+
 
 
