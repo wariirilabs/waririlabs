@@ -147,24 +147,31 @@ async function getData() {
 
 let cart = [];   
 let total = document.querySelector(".total");
-let sum=0;
-function getDetails(element){
-  let detail = {
-    price:element.closest("div").querySelector(".price").textContent,
-    name:element.closest("div").querySelector(".card-title").textContent
+let id = 0;
 
+function getDetails(element){
+  
+  let sum=0;
+  let detail = {
+    price:parseInt(element.closest("div").querySelector(".price").textContent),
+    name:element.closest("div").querySelector(".card-title").textContent,
+    id:id
   }
-  template = `
-  <li >${detail.name} : ${detail.price} $  <a class="btn-floating btn-small add waves-effect waves-light green "><i class="material-icons">add</i></a> <a class="btn-floating btn-small add waves-effect waves-light red "><i class="material-icons">remove</i></a></li>
-  
-  `;
-  cart1.innerHTML+=template;
-  
-  sum+=parseInt(detail.price);
-  total.innerHTML= parseInt(sum) + "$";
   cart.push(detail);
+  id++;
+  
+  
+  
+  display(cart);
+  
   console.log(cart);
 }  
+function delItem(id) {
+    let index = cart.findIndex((item) => item.id === id);
+    cart.splice(index, 1);
+    display(cart);
+}
+
 function wait(ms){
   var start = new Date().getTime();
   var end = start;
@@ -175,8 +182,34 @@ function wait(ms){
 getData();
 
 
+function display(cart) {
+  
+  cart1.innerHTML=null;
+  for(let i = 0;i<cart.length;i++) {
+    cart1.innerHTML += `
+  <li class="cart-item" id="${cart[i].id}">${cart[i].name} : ${cart[i].price} $  <a onclick="delItem(${cart[i].id})" class="btn-floating btn-small add waves-effect waves-light red "><i class="material-icons">remove</i></a></li>
+  
+  `;
+  
+
+   // getting the sum from the array 
+  
+  
+  
+  } 
+  calcSum();
+}
+
+function calcSum(){
+  let sum = 0;
+  for(let i = 0; i<cart.length;i++) {
+    sum+=cart[i].price;
+  }
+  total.innerHTML=sum;
+}
+
 let checkout = document.querySelector(".checkout");
 checkout.addEventListener('click', function(){
-  console.log(sum);
+  
 })
 
