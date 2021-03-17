@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 
@@ -20,7 +23,7 @@
       <a href="#" class="brand-logo truncate">Cafetaria El Patron</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">add_shopping_cart</i></a></li>
-        
+
       </ul>
     </div>
   </nav>
@@ -30,7 +33,7 @@
 
       </div>
 
-      <div class="col s12 m5 l5 grey lighten-3 center shop" style="height: 15rem; border-radius: 2rem !important;">
+      <!-- <div class="col s12 m5 l5 grey lighten-3 center shop" style="height: 15rem; border-radius: 2rem !important;">
         <div class="row">
           <div class="col s12">
             <div class="col s7" >
@@ -44,7 +47,7 @@
               <a class="waves-effect grey darken-3 checkout waves-light btn-small">Checkout</a>
             </div>
           </div>
-        </div>
+        </div> -->
         
         
       </div>
@@ -68,11 +71,18 @@
 
   
   
-
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script async src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"></script>
+  <div hidden id="snipcart" data-api-key="MTM5Yzg1MGQtNzM5MS00NDhkLWExNmItY2UxMzRiY2RjYzYyNjM3NTE1NDI2OTEwNzIxMjI1"></div>
   <script src="index.js"></script>
   
 
+
   <!-- Compiled and minified JavaScript -->
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src='https://cdn.jsdelivr.net/lodash/4.17.2/lodash.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>

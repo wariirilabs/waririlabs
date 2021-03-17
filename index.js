@@ -32,7 +32,7 @@ async function getData() {
     let name = numbers.gsx$name.$t;
     let category = numbers.gsx$category.$t;
     let image = numbers.gsx$image.$t;
-
+    let id = numbers.gsx$id.$t;
     let info = { 
         category:category,
         price: price,
@@ -58,7 +58,16 @@ async function getData() {
           <span class="card-title"> ${name}</span>  
           <p> Price </p>  
             <p style="font-size:20px !important" class="price"> ${price}</p>
-              <a class="btn black buton white-text" onclick="getDetails(this)" style="margin-top:1.5rem !important" href="#">Add to cart</a>
+              
+               <button class="snipcart-add-item btn black buton white-text" onclick="getDetails(this)" style="margin-top:1.5rem !important"
+  data-item-id="${id}"
+  data-item-price="${price}"
+  data-item-url="https://elcarlitoscafe.netlify.app/"
+  
+  data-item-image="${image}"
+  data-item-name="${name}">
+  Add to cart
+</button>
             </div>
           
         </div>
