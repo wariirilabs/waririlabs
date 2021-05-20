@@ -1,14 +1,21 @@
 * {
   font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "UnboundPro-bold";
+  src: url("./unboundpro-bold/UnboundPro-Bold.otf") format("opentype");
+}
 @media only screen and (max-width: 600px) {
   .card img {
     width: 70px;
     height: 200px;
   }
 }
-
+.slider .indicators {
+  display: none;
+}
 .hide {
   display: none;
 }
@@ -45,4 +52,142 @@
 
 .cart li {
   line-height: 3rem !important;
+}
+
+.nav-wrapper {
+  position: relative !important;
+  z-index: 1;
+}
+
+.slides {
+  width: 100% !important;
+  height: 89vh !important;
+}
+
+.slider {
+  height: 900px !important;
+}
+
+.slider h2 {
+  text-shadow: 5px 12px 10px black !important ;
+}
+
+.huracan {
+  margin-left: -10rem !important;
+  font-size: 7rem !important;
+  margin-top: -4rem !important;
+}
+
+.huracan2 {
+  margin-left: 33rem !important;
+
+  text-shadow: 5px 12px 10px black !important;
+}
+
+.urus {
+  font-size: 9rem !important;
+  margin-top: -1rem !important;
+  margin-left: 1rem !important;
+  background-color: transparent !important;
+}
+
+.flash:hover {
+  color: aqua;
+}
+
+.stonks {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://images.hdqwalls.com/download/long-mountain-ranges-landscape-orange-dark-sky-5k-vx-1920x1080.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  line-height: 0.2rem;
+  margin-top: -1.2rem;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://earthsky.org/upl/2019/07/TRAPPIST-1-exoplanets-illustration-Jan-24-2018-800x450.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  line-height: 0.2rem;
+  margin-top: -1.2rem;
+}
+.stonks2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Lightning-BurjKhalifa.jpg/1200px-Lightning-BurjKhalifa.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  line-height: 0.2rem;
+  margin-top: -1.2rem;
+}
+
+.btn-large {
+  margin-top: 2rem !important;
+  border: azure solid 2px !important;
+  border-radius: 3rem !important;
+}
+.btn-large:hover {
+  border: none;
+  color: black !important;
+  background-color: white !important;
+  transform: scale(1.1);
+  border-radius: 3rem !important;
+  transition: 0.4s;
+}
+.wariri {
+  background-image: url("./STONKS.png");
+  height: 60px;
+  width: 60px;
+  background-position: center;
+  background-size: cover;
+}
+.wariri:hover {
+  background-image: url("./STONKS2.png");
+  height: 60px;
+  width: 60px;
+}
+.star:hover {
+  color: orange;
+}
+
+.people:hover {
+  color: rgb(0, 60, 255);
+}
+
+nav i {
+  font-size: 50px;
+}
+nav a:hover {
+}
+.urus2 {
+  margin-top: -1rem !important;
+  margin-left: 1rem !important;
+  text-shadow: 5px 12px 10px black !important;
+  color: white !important;
+  font-weight: bolder !important;
+}
+
+.aventador {
+  margin-right: 11rem !important;
+  margin-top: -4rem !important;
+  font-size: 7rem !important;
+  background-color: transparent !important;
+}
+
+.aventador2 {
+  margin-right: 14rem !important;
+  background-color: transparent !important;
+
+  text-shadow: 5px 12px 10px black !important;
+}
+
+.brand-logo:hover {
 }
